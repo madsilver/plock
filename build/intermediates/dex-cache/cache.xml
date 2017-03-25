@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/home/silver/Projects/android/plock/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="/home/silver/Projects/android/plock/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-23.4.0_0eda56560a5621ae7f4d6d46451bde74fe9bb1b0/classes.dex" />
+    </item>
+    <item
+        jar="/home/silver/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/home/silver/Projects/android/plock/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.4.0_b661001bf41a743640cfe850e53616a35fcf3a10/classes.dex" />
+    </item>
+    <item
+        jar="/home/silver/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/7.0.1/d5d13ea991eab0252e3710e5df3d6a9d4b21d461/butterknife-7.0.1.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
+        <dex dex="/home/silver/Projects/android/plock/app/build/intermediates/transforms/dex/debug/folders/1000/10/butterknife-7.0.1_79d7dca309d4e76d4d43f887dec994f32e6a08fa/classes.dex" />
+    </item>
+    <item
+        jar="/home/silver/Projects/android/plock/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/home/silver/Projects/android/plock/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-23.4.0_4f9aea6b7e1f1c5649f6a86acd03a677195f707a/classes.dex" />
+    </item>
+    <item
+        jar="/home/silver/Projects/android/plock/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="/home/silver/Projects/android/plock/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-23.4.0_e1bef32dadfc9cd91cde5cf146a21131dbf2083d/classes.dex" />
+    </item>
+    <item
+        jar="/home/silver/Projects/android/plock/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/home/silver/Projects/android/plock/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.4.0_ac25c2e0a65ae0766571e42801739b5e7388aeff/classes.dex" />
+    </item>
+    <item
+        jar="/home/silver/Projects/android/plock/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/home/silver/Projects/android/plock/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.4.0_c6b5b15b0877e62382e79fecfec070e53d579d99/classes.dex" />
+    </item>
+    <item
+        jar="/home/silver/Projects/android/plock/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/home/silver/Projects/android/plock/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.4.0_32ad2e962463a1c50e3ae02045bb674c6bc737f9/classes.dex" />
+    </item>
+    <item
+        jar="/home/silver/Projects/android/plock/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/home/silver/Projects/android/plock/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.4.0_086300d0b74a7c1ff7d806d2c2afef95a3245d13/classes.dex" />
+    </item>
+    <item
+        jar="/home/silver/Projects/android/plock/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="b5674e9a46b97f9910b9bf3f6d192a4e03839542">
+        <dex dex="/home/silver/Projects/android/plock/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_863b2489ab120adda959f6c1dc8ca2a76399cab0/classes.dex" />
+    </item>
+    <item
+        jar="/home/silver/Projects/android/plock/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="40dbd54ac40a9a1aff90cb6820f913cfb92a6d33">
+        <dex dex="/home/silver/Projects/android/plock/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_616d6fb358977551be34f7d4fdfacc68e5b14052/classes.dex" />
+    </item>
+
+</items>
