@@ -10,6 +10,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+import java.io.IOException;
+
+import br.com.silver.plock.util.WebClient;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -41,12 +44,12 @@ public class MainActivity extends AppCompatActivity {
         String pin = mPinView.getText().toString();
 
         if (pin != "") {
-            mPinView.setError(getString(R.string.error_incorrect_pin));
-            mPinView.requestFocus();
-        } else {
             showProgress(true);
             mCommTask = new CommandTask(pin);
             mCommTask.execute((Void) null);
+        } else {
+            mPinView.setError(getString(R.string.error_incorrect_pin));
+            mPinView.requestFocus();
         }
     }
 
@@ -97,7 +100,14 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected Boolean doInBackground(Void... params) {
-            return true;
+            WebClient wc = new WebClient();
+            try {
+                String response = wc.get();
+                return true;
+            } catch (IOException e) {
+                e.printStackTrace();
+                return false;
+            }
         }
 
         @Override
