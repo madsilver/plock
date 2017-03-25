@@ -8,11 +8,11 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.plock.silver.plock.MainActivity">
+    tools:context="br.com.silver.plock.MainActivity">
 
-    <!-- Login progress -->
+    <!-- send progress -->
     <ProgressBar
-        android:id="@+id/login_progress"
+        android:id="@+id/send_progress"
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -20,12 +20,12 @@
         android:visibility="gone" />
 
     <ScrollView
-        android:id="@+id/login_form"
+        android:id="@+id/command_scroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:id="@+id/email_login_form"
+            android:id="@+id/command_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -39,9 +39,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/prompt_pin"
-                    android:inputType="textEmailAddress"
+                    android:inputType="textPassword"
                     android:maxLines="1"
-                    android:singleLine="true" />
+                    android:textAlignment="center"/>
 
             </android.support.design.widget.TextInputLayout>
 
@@ -52,8 +52,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="@string/action_send"
-                android:textStyle="bold"
-                android:onClick="attemptSend"/>
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/config_button"
