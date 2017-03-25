@@ -3,12 +3,14 @@ package br.com.silver.plock;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.io.IOException;
 
@@ -30,6 +32,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+    }
+
+    @OnClick(R.id.config_button)
+    public void openConfig() {
+        startActivity(new Intent(this, ConfigActivity.class));
     }
 
     @OnClick(R.id.send_button)
@@ -90,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public class CommandTask extends AsyncTask<Void, Void, Boolean> {
+    public class CommandTask extends AsyncTask<Void, Void, String> {
 
         private final String mPin;
 
@@ -99,28 +106,28 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected Boolean doInBackground(Void... params) {
-            WebClient wc = new WebClient();
+        protected String doInBackground(Void... params) {
+            WebClient wc = new WebClient(MainActivity.this);
             try {
                 String response = wc.get();
-                return true;
+                return response;
             } catch (IOException e) {
                 e.printStackTrace();
-                return false;
+                return e.getMessage();
             }
         }
 
         @Override
-        protected void onPostExecute(final Boolean success) {
+        protected void onPostExecute(final String success) {
             mCommTask = null;
             showProgress(false);
 
-            if (success) {
-                //finish();
-            } else {
+            if (success != "ok") {
                 mPinView.setError(getString(R.string.error_incorrect_pin));
                 mPinView.requestFocus();
             }
+
+            Toast.makeText(MainActivity.this, success, Toast.LENGTH_LONG).show();
         }
 
         @Override
