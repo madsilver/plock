@@ -3,7 +3,6 @@ package br.com.silver.plock;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
@@ -27,6 +26,8 @@ import butterknife.OnClick;
 public class MainActivity extends AppCompatActivity {
 
     private CommandTask mCommTask = null;
+    private String mUrl = null;
+    private String mParam = null;
 
     @BindView(R.id.code) EditText mCodeView;
     @BindView(R.id.command_layout) View mCommandView;
@@ -37,6 +38,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        mUrl = prefs.getString(getString(R.string.pref_url), "");
+        mParam = prefs.getString(getString(R.string.pref_url_param), "");
     }
 
     @OnClick(R.id.send_button)
@@ -47,11 +52,11 @@ public class MainActivity extends AppCompatActivity {
 
         mCodeView.setError(null);
 
-        String pin = mCodeView.getText().toString();
+        String code = mCodeView.getText().toString();
 
-        if (pin.length() > 0) {
+        if (code.length() > 0) {
             showProgress(true);
-            mCommTask = new CommandTask(pin);
+            mCommTask = new CommandTask(code, mUrl, mParam);
             mCommTask.execute((Void) null);
         } else {
             mCodeView.setError(getString(R.string.error_incorrect_code));
@@ -78,18 +83,18 @@ public class MainActivity extends AppCompatActivity {
     public class CommandTask extends AsyncTask<Void, Void, String> {
 
         private final String mCode;
+        private final String mUrl;
+        private final String mParam;
 
-        CommandTask(String code) {
+        CommandTask(String code, String url, String param) {
             mCode = code;
+            mUrl = url;
+            mParam = param;
         }
 
         @Override
         protected String doInBackground(Void... params) {
-            Context context = MainActivity.this;
-            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-            String url = prefs.getString(context.getString(R.string.pref_url), "");
-            String param = prefs.getString(context.getString(R.string.pref_url_param), "");
-            WebClient wc = new WebClient(url, param);
+            WebClient wc = new WebClient(mUrl, mParam);
             try {
                 String response = wc.get(mCode);
                 return response;
