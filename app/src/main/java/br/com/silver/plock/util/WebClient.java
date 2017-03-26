@@ -1,17 +1,10 @@
 package br.com.silver.plock.util;
 
-import android.app.Activity;
-import android.content.Context;
-import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
-
 import java.io.IOException;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-
-import br.com.silver.plock.R;
 
 /**
  * Created by silver on 25/03/17.
@@ -19,19 +12,17 @@ import br.com.silver.plock.R;
 
 public class WebClient {
 
-    Activity act;
+    private String mUrl;
+    private String mParam;
 
-    public WebClient(Activity act) {
-        this.act = act;
+    public WebClient(String url, String param) {
+        this.mUrl = url;
+        this.mParam = param;
     }
 
-    public String get() throws IOException {
+    public String get(String code) throws IOException {
 
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(act);
-        String url = prefs.getString(act.getString(R.string.pref_url), "");
-        String param = prefs.getString(act.getString(R.string.pref_url_param), "");
-
-        String source = url+"?f="+param;
+        String source = String.format("%s?f=%s&pin=%s", this.mUrl, this.mParam, code);
 
         OkHttpClient client = new OkHttpClient();
 

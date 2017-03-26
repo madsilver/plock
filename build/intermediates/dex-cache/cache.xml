@@ -52,7 +52,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="9c310f21313aa24b1d0dab5d5286bf4d96026c33">
+        sha1="7b471c51b1eac8d7bab93cd437922792872e5e3e">
         <dex dex="/home/silver/Projects/android/plock/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_863b2489ab120adda959f6c1dc8ca2a76399cab0/classes.dex" />
     </item>
     <item
