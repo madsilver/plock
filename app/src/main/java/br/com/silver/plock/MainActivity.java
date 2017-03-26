@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private String mParam = null;
 
     @BindView(R.id.code) EditText mCodeView;
+    @BindView(R.id.ssid) EditText mSSIDView;
     @BindView(R.id.command_layout) View mCommandView;
     @BindView(R.id.send_progress) View mProgressView;
 
@@ -38,15 +39,27 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         mUrl = prefs.getString(getString(R.string.pref_url), "");
         mParam = prefs.getString(getString(R.string.pref_url_param), "");
+
+        String ssid = WebClient.getSSID(this);
+        mSSIDView.setText(ssid);
     }
 
     @OnClick(R.id.send_button)
     public void attemptSend() {
         if (mCommTask != null) {
+            return;
+        }
+
+        if(mUrl.length() < 1 || mParam.length() < 1) {
+            Toast.makeText(MainActivity.this, "Settings required", Toast.LENGTH_LONG).show();
             return;
         }
 
