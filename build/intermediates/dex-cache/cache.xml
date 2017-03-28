@@ -2,139 +2,85 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
-        jar="/home/silver/Projects/android/plock/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/home/silver/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.11.0/840897fcd7223a8143f1d9b6f69714e7be34fd50/okio-1.11.0.jar"
+        jumboMode="false"
         optimize="true"
-        revision="25.0.0"
-        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
-        <dex dex="/home/silver/Projects/android/plock/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_616d6fb358977551be34f7d4fdfacc68e5b14052/classes.dex" />
+        revision="25.0.2"
+        sha1="840897fcd7223a8143f1d9b6f69714e7be34fd50">
+        <dex dex="/home/silver/Projects/android/plock/app/build/intermediates/pre-dexed/debug/okio-1.11.0_7ef18ab23c3b5b4f8e405a6ced23ba090774593c.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/home/silver/.android/build-cache/68a7fb9f4aca568fe07a66cf325e294383f6e508/output/jars/classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/home/silver/.android/build-cache/656d5906bde767b28832680f1066e7d2f2f89c86/output/jars/classes.jar"
+        jumboMode="false"
         optimize="true"
-        revision="25.0.0"
-        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
-        <dex dex="/home/silver/Projects/android/plock/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_071a0dcf24cd062cb09c61e728473fed465510b2/classes.dex" />
+        revision="25.0.2"
+        sha1="a3e61044038fb54cddf6b8dc79f41d2b57f42caf">
+        <dex dex="/home/silver/Projects/android/plock/app/build/intermediates/pre-dexed/debug/classes_6b3a9d12f3317514b0530214fa4af61e89f4fdcf.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/home/silver/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.0/support-annotations-25.1.0.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/home/silver/.android/build-cache/2504713116d400897c6fa5c94e29e6b1b19bdd8c/output/jars/classes.jar"
+        jumboMode="false"
         optimize="true"
-        revision="25.0.0"
-        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
-        <dex dex="/home/silver/Projects/android/plock/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.1.0_14c25d9eb226f40e14f7aa9aa4fe0861289b0d33/classes.dex" />
+        revision="25.0.2"
+        sha1="9ab787a20aae245b5b3651ae0b9c38459eb37715">
+        <dex dex="/home/silver/Projects/android/plock/app/build/intermediates/pre-dexed/debug/classes_6c5f9da38953f7074e8ec21cef1d45fb93811c56.jar" />
     </item>
     <item
         is-multidex="true"
         jar="/home/silver/Projects/android/plock/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
-        revision="25.0.0"
-        sha1="8520a472a204d6ad1af410c080f3b05e0f5e5ae5">
+        revision="25.0.2"
+        sha1="5985428d2f4d4e356a3fef529c09364a088fbb4d">
         <dex dex="/home/silver/Projects/android/plock/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_863b2489ab120adda959f6c1dc8ca2a76399cab0/classes.dex" />
     </item>
     <item
-        is-multidex="true"
-        jar="/home/silver/.android/build-cache/5b74c66afd760e58b47e334da92e15e9c518ed6b/output/jars/libs/internal_impl-23.4.0.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/home/silver/.android/build-cache/be7b224e35dd1ad1cccd1eb4b95962bc2beb98ac/output/jars/classes.jar"
+        jumboMode="false"
         optimize="true"
-        revision="25.0.0"
-        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
-        <dex dex="/home/silver/Projects/android/plock/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.4.0_551f432b1c35236efa1b8ecba539b0e66b0fe22f/classes.dex" />
+        revision="25.0.2"
+        sha1="fbb206f7a119f66ce171d95aae1225a5b209a8b7">
+        <dex dex="/home/silver/Projects/android/plock/app/build/intermediates/pre-dexed/debug/classes_a7dd913ac6b513dbd376f8a1b882988481cf59d0.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/home/silver/.android/build-cache/4de07abdad4c728319b129cfe6dfbb74eced052e/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
-        <dex dex="/home/silver/Projects/android/plock/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4545a2b15f0112531718ede6bae0984f75209b71/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/silver/.android/build-cache/d3510c75c1bf52dcb0ec20bd28352e374c596a58/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
-        <dex dex="/home/silver/Projects/android/plock/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_8e09db192a9b3e71196994c40a20b921309829b2/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/silver/.android/build-cache/1ff8e6bcbd98bfee9d7c1bbe68060f5fc33bbadb/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
-        <dex dex="/home/silver/Projects/android/plock/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_095595c8bd28cbf9db77cd07b9d6025d84131c50/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/silver/.android/build-cache/87b16bc85dbf907b8da02e9ba4c14daebeb38845/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
-        <dex dex="/home/silver/Projects/android/plock/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_0a06ccc78ecc9dea623ece9ba6e3f197892632f5/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/silver/.android/build-cache/b3dca5fddc1ee408bdb78500d69e2864f64ec668/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
-        <dex dex="/home/silver/Projects/android/plock/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_7244308454e938c4174d4962d057d5d2d60ab3f0/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
+        is-multidex="false"
         jar="/home/silver/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
-        revision="25.0.0"
+        revision="25.0.2"
         sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
-        <dex dex="/home/silver/Projects/android/plock/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-3.6.0_6826a8bc16b60e36c2e54b5fae4a93e9a4212dda/classes.dex" />
+        <dex dex="/home/silver/Projects/android/plock/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_6826a8bc16b60e36c2e54b5fae4a93e9a4212dda.jar" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/silver/.android/build-cache/5b74c66afd760e58b47e334da92e15e9c518ed6b/output/jars/classes.jar"
+        jar="/home/silver/Projects/android/plock/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
-        revision="25.0.0"
-        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
-        <dex dex="/home/silver/Projects/android/plock/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f075ee1bf418cb4fa6747b5ff662b3ea7ed75c42/classes.dex" />
+        revision="25.0.2"
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="/home/silver/Projects/android/plock/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_616d6fb358977551be34f7d4fdfacc68e5b14052/classes.dex" />
     </item>
     <item
-        is-multidex="true"
-        jar="/home/silver/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.11.0/840897fcd7223a8143f1d9b6f69714e7be34fd50/okio-1.11.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="840897fcd7223a8143f1d9b6f69714e7be34fd50">
-        <dex dex="/home/silver/Projects/android/plock/app/build/intermediates/transforms/dex/debug/folders/1000/10/okio-1.11.0_7ef18ab23c3b5b4f8e405a6ced23ba090774593c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
+        is-multidex="false"
         jar="/home/silver/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife-annotations/8.5.1/bb67dad90bab7cd77a8f7f1b8442b47e3a2326bc/butterknife-annotations-8.5.1.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
-        revision="25.0.0"
+        revision="25.0.2"
         sha1="bb67dad90bab7cd77a8f7f1b8442b47e3a2326bc">
-        <dex dex="/home/silver/Projects/android/plock/app/build/intermediates/transforms/dex/debug/folders/1000/10/butterknife-annotations-8.5.1_1c075611f6366d8db689f02ec5344b8a58830784/classes.dex" />
+        <dex dex="/home/silver/Projects/android/plock/app/build/intermediates/pre-dexed/debug/butterknife-annotations-8.5.1_1c075611f6366d8db689f02ec5344b8a58830784.jar" />
     </item>
     <item
-        is-multidex="true"
+        is-multidex="false"
         jar="/home/silver/.android/build-cache/343d9fe2957f6865eed8d490e5856ebdacf26ecf/output/jars/classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
-        revision="25.0.0"
+        revision="25.0.2"
         sha1="19f281a785ca0eb5f6799fc7bf7ca199a9ca1e8b">
-        <dex dex="/home/silver/Projects/android/plock/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6628eb46b420ce71cb668cff34fe87dc86d1b682/classes.dex" />
+        <dex dex="/home/silver/Projects/android/plock/app/build/intermediates/pre-dexed/debug/classes_6628eb46b420ce71cb668cff34fe87dc86d1b682.jar" />
     </item>
 
 </items>

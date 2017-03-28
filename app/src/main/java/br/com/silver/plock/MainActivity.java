@@ -14,6 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.IOException;
@@ -28,8 +29,10 @@ public class MainActivity extends AppCompatActivity {
     private CommandTask mCommTask = null;
     private String mUrl = null;
     private String mParam = null;
+    private Boolean requireCode = false;
 
     @BindView(R.id.code) EditText mCodeView;
+    @BindView(R.id.ssid_label) TextView mSSIDView;
     @BindView(R.id.command_layout) View mCommandView;
     @BindView(R.id.send_progress) View mProgressView;
 
@@ -38,10 +41,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         mUrl = prefs.getString(getString(R.string.pref_url), "");
         mParam = prefs.getString(getString(R.string.pref_url_param), "");
+
+        String ssid = WebClient.getSSID(this);
+        mSSIDView.setText(ssid);
     }
 
     @OnClick(R.id.send_button)
@@ -50,17 +60,22 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
+        if(mUrl.length() < 1 || mParam.length() < 1) {
+            Toast.makeText(MainActivity.this, "Settings required", Toast.LENGTH_LONG).show();
+            return;
+        }
+
         mCodeView.setError(null);
 
         String code = mCodeView.getText().toString();
 
-        if (code.length() > 0) {
+        if (code == null && requireCode ) {
+            mCodeView.setError(getString(R.string.error_incorrect_code));
+            mCodeView.requestFocus();
+        } else {
             showProgress(true);
             mCommTask = new CommandTask(code, mUrl, mParam);
             mCommTask.execute((Void) null);
-        } else {
-            mCodeView.setError(getString(R.string.error_incorrect_code));
-            mCodeView.requestFocus();
         }
     }
 

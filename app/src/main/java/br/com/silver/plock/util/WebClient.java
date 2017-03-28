@@ -1,5 +1,9 @@
 package br.com.silver.plock.util;
 
+import android.content.Context;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
+
 import java.io.IOException;
 
 import okhttp3.OkHttpClient;
@@ -22,7 +26,11 @@ public class WebClient {
 
     public String get(String code) throws IOException {
 
-        String source = String.format("%s?f=%s&pin=%s", this.mUrl, this.mParam, code);
+        String source = String.format("%s?f=%s", this.mUrl, this.mParam);
+
+        if(code != null) {
+            source += "&code="+code;
+        }
 
         OkHttpClient client = new OkHttpClient();
 
@@ -35,5 +43,12 @@ public class WebClient {
         String json = response.body().string();
 
         return json;
+    }
+
+    public static String getSSID(Context context){
+        WifiManager wifiManager = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
+        WifiInfo info = wifiManager.getConnectionInfo ();
+        String ssid  = info.getSSID();
+        return ssid;
     }
 }
