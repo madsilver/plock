@@ -6,6 +6,7 @@ import android.annotation.TargetApi;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -13,6 +14,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.ssid_label) TextView mSSIDView;
     @BindView(R.id.command_layout) View mCommandView;
     @BindView(R.id.send_progress) View mProgressView;
+    @BindView(R.id.input_fp) android.support.design.widget.TextInputLayout mInputFP;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +54,18 @@ public class MainActivity extends AppCompatActivity {
         mParam = prefs.getString(getString(R.string.pref_url_param), "");
 
         String ssid = WebClient.getSSID(this);
-        mSSIDView.setText(ssid);
+        mSSIDView.setText(ssid.replace("\"",""));
+    }
+
+    @OnClick(R.id.fab)
+    public void showFingerprint() {
+        if(mInputFP.getVisibility() == View.GONE) {
+            mInputFP.setVisibility(View.VISIBLE);
+            mInputFP.setFocusable(true);
+        }
+        else {
+            mInputFP.setVisibility(View.GONE);
+        }
     }
 
     @OnClick(R.id.send_button)
@@ -124,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
             mCommTask = null;
             showProgress(false);
 
-            if (success != "ok") {
+            if (success == "code_error") {
                 mCodeView.setError(getString(R.string.error_incorrect_code));
                 mCodeView.requestFocus();
             }

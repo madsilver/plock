@@ -20,29 +20,26 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
 
-        <Button
-            style="?android:textAppearanceSmall"
-            android:layout_width="match_parent"
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/action_send"
-            android:textStyle="bold"
-            tools:drawableLeft="@drawable/ic_wifi_white_24dp"
-            android:background="@color/colorPrimaryDark"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"/>
+            android:layout_marginStart="16dp"
+            app:srcCompat="@drawable/ic_wifi_white_24dp" />
 
-        <Button
-            style="?android:textAppearanceSmall"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/ssid_label"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_vpn_key_white_24dp"
-            android:text="@string/action_send"
-            android:textStyle="bold"
-            android:background="@color/colorPrimaryDark"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"/>
+            android:text="SSID Network"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center"
+            android:textColor="@color/actionBarText"
+            android:textSize="18dp"
+            android:textStyle="bold"/>
 
     </LinearLayout>
 
@@ -55,9 +52,11 @@
         android:padding="50dp">
 
         <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_fp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="@color/colorTextPrimary">
+            android:textColorHint="@color/actionBarText"
+            android:visibility="gone">
 
             <EditText
                 android:id="@+id/code"
@@ -67,41 +66,27 @@
                 android:inputType="textPassword"
                 android:maxLines="1"
                 android:textAlignment="center"
-                android:textColor="@color/colorTextPrimary"/>
+                android:textColor="@color/actionBarText"/>
 
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColorHint="@color/colorTextPrimary">
-
-            <EditText
-                android:id="@+id/ssid_label"
+            <CheckBox
+                android:id="@+id/checkBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/prompt_ssid"
-                android:inputType="text"
-                android:textAlignment="center"
-                android:textColor="@color/colorTextPrimary"/>
+                android:text="@string/remember_check"
+                android:textColor="@color/actionBarText"/>
 
         </android.support.design.widget.TextInputLayout>
-
-        <CheckBox
-            android:id="@+id/checkBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/remember_check" />
 
         <Button
             android:id="@+id/send_button"
             style="?android:textAppearanceSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="20dp"
             android:text="@string/action_send"
             android:textStyle="bold"
-            android:background="@color/colorPrimaryDark"/>
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/colorAccent"/>
 
     </LinearLayout>
 
@@ -112,6 +97,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
-        app:srcCompat="@drawable/ic_vpn_key_white_24dp" />
+        app:srcCompat="@drawable/ic_fingerprint_white_24dp" />
 
 </android.support.design.widget.CoordinatorLayout>

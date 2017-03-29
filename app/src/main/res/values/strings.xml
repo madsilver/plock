@@ -12,5 +12,7 @@
     <string name="pref_url">http://</string>
     <string name="remember_check">Remember</string>
     <string name="prompt_ssid">Current SSID</string>
+    <string name="ssid_network">SSID Network</string>
+    <string name="fingerprint">Fingerprint</string>
 
 </resources>
