@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PLock</string>
+    <string name="app_name">P-Lock</string>
 
     <string name="prompt_code">Enter Code</string>
     <string name="action_send">Send</string>
@@ -7,12 +7,14 @@
     <string name="error_field_required">This field is required</string>
     <string name="error_incorrect_code">This code is invalid</string>
     <string name="pref_url_param">on</string>
-    <string name="title_url_param">URL parameter</string>
+    <string name="title_url_param">Parameter</string>
     <string name="title_url">URL</string>
     <string name="pref_url">http://</string>
     <string name="remember_check">Remember</string>
     <string name="prompt_ssid">Current SSID</string>
     <string name="ssid_network">SSID Network</string>
     <string name="fingerprint">Fingerprint</string>
+    <string name="summary_pref_url">Allows you to define a server</string>
+    <string name="summary_pref_url_param">Parameter sent to the server</string>
 
 </resources>

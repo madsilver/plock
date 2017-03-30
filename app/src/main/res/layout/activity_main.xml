@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context="br.com.silver.plock.MainActivity"
-    android:background="@color/colorPrimary">
+    tools:context="br.com.silver.plock.MainActivity">
 
     <ProgressBar
         android:id="@+id/send_progress"
@@ -37,7 +36,6 @@
             android:text="SSID Network"
             android:layout_marginLeft="20dp"
             android:layout_gravity="center"
-            android:textColor="@color/actionBarText"
             android:textSize="18dp"
             android:textStyle="bold"/>
 
@@ -55,7 +53,6 @@
             android:id="@+id/input_fp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="@color/actionBarText"
             android:visibility="gone">
 
             <EditText
@@ -65,15 +62,13 @@
                 android:hint="@string/prompt_code"
                 android:inputType="textPassword"
                 android:maxLines="1"
-                android:textAlignment="center"
-                android:textColor="@color/actionBarText"/>
+                android:textAlignment="center"/>
 
             <CheckBox
                 android:id="@+id/checkBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/remember_check"
-                android:textColor="@color/actionBarText"/>
+                android:text="@string/remember_check"/>
 
         </android.support.design.widget.TextInputLayout>
 
@@ -85,8 +80,8 @@
             android:layout_marginTop="20dp"
             android:text="@string/action_send"
             android:textStyle="bold"
-            android:background="@color/colorPrimaryDark"
-            android:textColor="@color/colorAccent"/>
+            android:background="@color/colorAccent"
+            android:textColor="@color/actionBarText"/>
 
     </LinearLayout>
 
@@ -97,6 +92,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
-        app:srcCompat="@drawable/ic_fingerprint_white_24dp" />
+        app:srcCompat="@drawable/ic_vpn_key_white_24dp" />
 
 </android.support.design.widget.CoordinatorLayout>

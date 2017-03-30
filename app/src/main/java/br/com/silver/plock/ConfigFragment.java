@@ -13,17 +13,17 @@ public class ConfigFragment extends PreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
     EditTextPreference mUrl;
-    EditTextPreference mUrlParam;
+    EditTextPreference mParam;
 
     @Override
     public void onCreate(Bundle saveInstanceState) {
         super.onCreate(saveInstanceState);
         addPreferencesFromResource(R.xml.preferences);
         mUrl = (EditTextPreference) findPreference(getString(R.string.pref_url));
-        mUrlParam = (EditTextPreference) findPreference(getString(R.string.pref_url_param));
+        mParam = (EditTextPreference) findPreference(getString(R.string.pref_url_param));
 
         fillSummary(mUrl);
-        fillSummary(mUrlParam);
+        fillSummary(mParam);
     }
 
     private void fillSummary(Preference preference) {
