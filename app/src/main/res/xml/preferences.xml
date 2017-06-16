@@ -4,8 +4,5 @@
         android:title="@string/title_url"
         android:key="@string/pref_url"
         android:summary="@string/summary_pref_url"/>
-    <EditTextPreference
-        android:title="@string/title_url_param"
-        android:key="@string/pref_url_param"
-        android:summary="@string/summary_pref_url_param"/>
+
 </PreferenceScreen>

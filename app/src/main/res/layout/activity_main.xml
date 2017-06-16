@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
+    android:background="#2b2b2b"
     tools:context="br.com.silver.plock.MainActivity">
 
     <ProgressBar
@@ -27,7 +28,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginStart="16dp"
-            app:srcCompat="@drawable/ic_wifi_white_24dp" />
+            app:srcCompat="@drawable/ic_vpn_lock_white_24dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -38,18 +39,20 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="SSID Network"
+                android:text="@string/plock_device"
                 android:layout_gravity="center"
                 android:textSize="12dp"
+                android:textColor="@color/actionBarText"
                 android:layout_marginTop="8dp"/>
 
             <TextView
-                android:id="@+id/ssid_label"
+                android:id="@+id/url_label"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="SSID Network"
+                android:text="URL"
                 android:layout_gravity="center"
                 android:textSize="20dp"
+                android:textColor="@color/actionBarText"
                 android:textStyle="bold"/>
 
         </LinearLayout>
@@ -66,49 +69,40 @@
         android:orientation="vertical"
         android:padding="50dp">
 
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/input_fp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="gone">
-
-            <EditText
-                android:id="@+id/code"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/prompt_code"
-                android:inputType="textPassword"
-                android:maxLines="1"
-                android:textAlignment="center"/>
-
-            <CheckBox
-                android:id="@+id/checkBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/remember_check"/>
-
-        </android.support.design.widget.TextInputLayout>
-
         <Button
-            android:id="@+id/send_button"
+            android:id="@+id/button_action_1"
             style="?android:textAppearanceSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="@string/action_send"
+            android:text="@string/action_1"
             android:textStyle="bold"
-            android:background="@color/colorAccent"
+            android:background="@color/colorButton1"
+            android:textColor="@color/actionBarText"/>
+
+        <Button
+            android:id="@+id/button_action_2_on"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/action_2_on"
+            android:textStyle="bold"
+            android:background="@color/colorButton2"
+            android:textColor="@color/actionBarText"/>
+
+        <Button
+            android:id="@+id/button_action_2_off"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/action_2_off"
+            android:textStyle="bold"
+            android:background="@color/colorButton3"
             android:textColor="@color/actionBarText"/>
 
     </LinearLayout>
 
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"
-        app:srcCompat="@drawable/ic_vpn_key_white_24dp" />
 
 </android.support.design.widget.CoordinatorLayout>
